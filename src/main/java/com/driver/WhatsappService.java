@@ -46,7 +46,7 @@ public class WhatsappService {
             throw new GroupDoesNotExistException();
         }
         if(!WhatsappRepository.checkGroupAdmin(approver,group)){
-            throw new ApproverDoesNotHaveRight();
+            throw new ApproverDoesNotHaveRights();
         }
         if(!WhatsappRepository.checkUserExistInGroup(user,group)){
             throw new UserIsNotParticipent();
