@@ -13,6 +13,7 @@ public class WhatsappService {
         if(containsUser){
             throw new UserAlreadyExistException();
         }
+        WhatsappRepository.createUser(name,mobile);
         return "SUCCESS";
     }
 
