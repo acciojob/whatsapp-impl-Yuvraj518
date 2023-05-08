@@ -33,6 +33,10 @@ public class WhatsappRepository {
         }
         return false;
     }
+    public static void createUser(String name,String mobile){
+        User user =new User(name,mobile);
+        userMobile.add(mobile);
+        }
 
     public static void createGroup(List<User> users, Group gp1) {
         groupUserMap.put(gp1,users);
