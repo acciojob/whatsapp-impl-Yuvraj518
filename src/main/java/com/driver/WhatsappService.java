@@ -41,7 +41,7 @@ public class WhatsappService {
         return WhatsappRepository.sendMessage(message, sender, group);
     }
 
-    public String changeAdmin(User approver, User user, Group group) throws GroupDoesNotExistException, ApproverDoesNotHaveRight, UserIsNotParticipent {
+    public String changeAdmin(User approver, User user, Group group) throws GroupDoesNotExistException, ApproverDoesNotHaveRights, UserIsNotParticipent {
         if(!WhatsappRepository.getGroupExist(group)){
             throw new GroupDoesNotExistException();
         }
