@@ -78,7 +78,7 @@ public class WhatsappController {
             return whatsappService.changeAdmin(approver, user, group);
         } catch (GroupDoesNotExistException e) {
             throw new RuntimeException(e);
-        } catch (ApproverDoesNotHaveRight e) {
+        } catch (ApproverDoesNotHaveRights e) {
             throw new RuntimeException(e);
         } catch (UserIsNotParticipent e) {
             throw new RuntimeException(e);
